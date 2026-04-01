@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+     <link rel="icon" href="HLMLLOGO.png" type="image/x-icon">
+     <link rel="stylesheet" href="MLbb-Organazed.css">
+    <title>MLBB TOURNAMENT MANAGER | PANIC ULT FORMAT READY</title>
+    
+</head>
+<body>
+<div class="app">
+    <div class="system-console-panel">
+        <div class="console-header">
+            <div class="console-title">
+                <span>🖥️ MLBB SYSTEM CONSOLE [v3.1]</span>
+                <span class="console-status-badge">● ACTIVE</span>
+            </div>
+            <div class="console-actions">
+                <button class="console-clear-btn" id="clearConsoleBtn">🗑️ CLEAR LOG</button>
+            </div>
+        </div>
+        <div class="console-output" id="systemConsoleOutput">
+            <div class="console-line success">> MLBB Tournament System v3.1 initialized (PANIC ULT Format Ready)</div>
+            <div class="console-line info">> New parser: TEAM NAME: + IGN/ID blocks + RESERVED PLAYERS section</div>
+            <div class="console-line success">> SYSTEM READY | Full team visibility + advanced roster paste</div>
+        </div>
+    </div>
+
+    <div class="header">
+        <h1>🏆 HIGH LEVEL MLBB TOURNAMENT LIST</h1>
+    </div>
+    <div class="save-status" id="saveStatus">💾 All changes saved automatically</div>
+
+    <div class="dashboard">
+        <!-- LEFT PANEL: TEAM STUDIO -->
+        <div class="team-column-panel">
+            <div class="panel-header">
+                <h2>🏅 TEAM STUDIO</h2>
+                <span style="font-size:12px;">⚡ Upload logo + Add members</span>
+            </div>
+            <div class="paste-zone">
+                <label>📎 📋 PASTE TEAM ROSTER (PANIC ULT format supported)</label>
+                <textarea id="pasteRosterInput" class="paste-textarea" rows="6" placeholder='TEAM NAME: PANIC ULT
+
+IGN: Seb
+ID: 1754620111
+
+IGN: sheesh
+ID: 173219104 
+
+IGN: IRAAAA
+ID: 817673263  
+
+IGN: VRAMM KIDDDD
+ID: 703164236
+
+IGN: NASAN YUNG BEAT? 
+ID: 730283545
+
+RESERVED PLAYERS
+
+IGN: Godspeed
+ID: 388452085
+
+IGN: SMOSHI
+ID:876854660'></textarea>
+                <div class="paste-buttons">
+                    <button id="parseAndCreateTeamBtn" class="primary">✨ Parse & Create Team</button>
+                    <button id="clearPasteBtn">Clear</button>
+                </div>
+            </div>
+            <div id="teamSelectorContainer" class="team-selector-bar"></div>
+            <div class="add-team-simple">
+                <input type="text" id="quickTeamName" placeholder="New team name">
+                <button id="createEmptyTeamBtn">+ Create</button>
+            </div>
+            <div id="activeTeamHeader" class="team-header-card">
+                <div style="display: flex; align-items: center; gap: 16px; width: 100%;">
+                    <img id="teamLogoLarge" class="team-logo-large" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%232a3a55'/%3E%3Ctext x='50' y='67' font-size='40' text-anchor='middle' fill='%23F9B43A'%3E🏆%3C/text%3E%3C/svg%3E">
+                    <div class="team-info-header">
+                        <h3 id="activeTeamNameDisplay">Select Team</h3>
+                        <div class="member-count" id="activeMemberCount">0 members</div>
+                    </div>
+                    <button id="uploadLogoBtn" class="upload-logo-btn" style="margin-left: auto;">📷 Upload Logo</button>
+                    <input type="file" id="logoFileInput" accept="image/*" style="display: none;">
+                </div>
+            </div>
+            <div class="add-member-section">
+                <div class="add-member-title">➕ MANUALLY ADD MEMBER TO ACTIVE TEAM</div>
+                <div class="add-member-inputs">
+                    <input type="text" id="newMemberIgn" placeholder="IGN / Player name" autocomplete="off">
+                    <input type="text" id="newMemberId" placeholder="ID (optional)" autocomplete="off">
+                    <button id="addMemberBtn" class="add-member-btn">+ Add Member</button>
+                </div>
+            </div>
+            <div id="membersColumnList" class="members-column">
+                <div style="padding: 20px; text-align:center;">✨ Select a team to see members</div>
+            </div>
+            <div class="column-footer">
+                <button id="placeTeamToSelectedCellBtn" class="primary">📌 PLACE TEAM → CELL</button>
+                <button id="clearGridBtn">🗑 Clear Grid</button>
+                <button id="deleteTeamBtn" class="danger">❌ Delete Team</button>
+            </div>
+            <div class="reset-buttons-group">
+                <button id="deleteAllTeamsBtn" class="danger" style="flex:1;">🔥 Delete ALL Teams</button>
+            </div>
+            <div style="font-size: 11px; margin-top: 14px; text-align: center; color:#F9B43A;">
+                💡 Click any grid cell → assign ENTIRE TEAM (all members + logo) — FULL VIEW
+            </div>
+        </div>
+
+        <div class="grid-panel">
+            <div class="grid-header">
+                <h3>🗺️ MLBB TEAM LIST</h3>
+                <button id="resetGridBtn">Reset All Cells</button>
+            </div>
+            <div id="battleGridContainer" class="battle-grid"></div>
+            <div class="legend">
+                <span>🏢 5 Columns x 6 Rows = 30 Slots</span>
+                <span>📦 Full team info: Logo + Name + EVERY member</span>
+                <span>✨ Click empty cell → assign current team</span>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="MLbb-Organazed.js"></script>
+</body>
+</html>

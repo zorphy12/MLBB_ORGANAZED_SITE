@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>HighLevel Access | Secure Login</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236667ee'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15h-2v-2h2v2zm0-4h-2V7h2v6z'/%3E%3C/svg%3E">
+ 
+</head>
+<body>
+  <div class="login-container">
+    <h2>⚡ HIGHLEVEL</h2>
+    <div class="brand-badge">
+      <span>🔐 ADMIN PORTAL</span>
+    </div>
+    <form id="loginForm" action="#" method="post">
+      <div class="input-group">
+        <label>👤 USERNAME</label>
+        <input type="text" id="username" placeholder="Enter your username" autocomplete="off" required>
+      </div>
+      <div class="input-group">
+        <label>🔒 PASSWORD</label>
+        <input type="password" id="password" placeholder="················" autocomplete="off" required>
+      </div>
+      <button type="submit" id="loginBtn">➤ ACCESS DASHBOARD</button>
+      <div id="errorMsg" class="error-message" style="display: none;"></div>
+    </form>
+    <div class="extra">
+     
+      📁 Redirects to: <strong style="color:#ffecb3;">Access Admin Dashboard</strong>
+      <div class="info-note">
+        ⚡ Secure authentication required — MLBB Dashboard ready
+      </div>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
