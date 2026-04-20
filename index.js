@@ -84,7 +84,7 @@
           }, 180); 
         } else {
           // ❌ Invalid credentials
-          showError("⛔ ACCESS DENIED! Invalid username or password. Use: HighLevel123 / HighLevel123");
+          showError("⛔ ACCESS DENIED! Invalid username or password. Use: LevelHigh321 / LevelHigh321");
           // Clear password field for security
           passwordInput.value = '';
           passwordInput.focus();
