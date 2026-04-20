@@ -1,8 +1,8 @@
 
     (function() {
       
-      const VALID_USERNAME = "HighLevel123";
-      const VALID_PASSWORD = "HighLevel123";
+      const VALID_USERNAME = "LevelHigh321";
+      const VALID_PASSWORD = "LevelHigh321";
       
     
       const DASHBOARD_PAGE = "MLbb-Organazed.html";
